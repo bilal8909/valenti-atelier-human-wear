@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VALENTI ATELIER | Luxury Fashion & Modern Sartorial Essentials</title>
+  <meta name="description" content="Discover VALENTI ATELIER - modern luxury fashion, masterfully tailored garments, Italian craftsmanship, and timeless ready-to-wear essentials.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Luxury Design System -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar text-center">
+    <div class="container">
+      Complimentary Express Shipping on Orders Over $150 &nbsp;|&nbsp;
+      Use code <a href="shop.html">VALENTI10</a> for 10% Off
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar navbar-expand-lg sticky-top atelier-navbar">
+    <div class="container">
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler border-0 p-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas">
+        <i class="bi bi-list fs-2 text-dark"></i>
+      </button>
+
+      <!-- Brand Logo -->
+      <a class="brand-logo" href="index.html">
+        <span>VALENTI</span>
+        <span class="brand-logo-sub">Atelier</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html?gender=men">Men</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html?gender=women">Women</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html?filter=new">New Arrivals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Action Icons -->
+      <div class="d-flex align-items-center gap-1">
+        <!-- Search Trigger -->
+        <button class="nav-icon-btn" data-bs-toggle="modal" data-bs-target="#searchModal" title="Search catalog">
+          <i class="bi bi-search"></i>
+        </button>
+
+        <!-- User / Account Trigger -->
+        <button class="nav-icon-btn d-none d-sm-inline-flex" data-bs-toggle="modal" data-bs-target="#accountModal" title="Account login">
+          <i class="bi bi-person"></i>
+        </button>
+
+        <!-- Wishlist Link -->
+        <a href="shop.html?filter=wishlist" class="nav-icon-btn" title="Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="badge-counter wishlist-badge-count" style="display: none;">0</span>
+        </a>
+
+        <!-- Shopping Cart Trigger -->
+        <button class="nav-icon-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" title="Shopping Bag">
+          <i class="bi bi-bag"></i>
+          <span class="badge-counter cart-badge-count" style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas" style="width: 320px;">
+    <div class="offcanvas-header border-bottom">
+      <div class="brand-logo">
+        <span>VALENTI</span>
+        <span class="brand-logo-sub">Atelier</span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-4">
+      <ul class="list-unstyled mb-4">
+        <li class="py-2 border-bottom"><a href="index.html" class="fw-semibold text-dark text-uppercase small">Home</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html" class="fw-semibold text-dark text-uppercase small">All Collections</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html?gender=men" class="fw-semibold text-dark text-uppercase small">Men's Atelier</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html?gender=women" class="fw-semibold text-dark text-uppercase small">Women's Atelier</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html?filter=new" class="fw-semibold text-dark text-uppercase small">New Arrivals</a></li>
+        <li class="py-2 border-bottom"><a href="about.html" class="fw-semibold text-dark text-uppercase small">Brand Story & Craft</a></li>
+        <li class="py-2 border-bottom"><a href="contact.html" class="fw-semibold text-dark text-uppercase small">Boutiques & Contact</a></li>
+        <li class="py-2"><a href="cart.html" class="fw-semibold text-dark text-uppercase small">View Shopping Bag</a></li>
+      </ul>
+      <div class="pt-3 border-top">
+        <button class="btn btn-atelier-dark w-100 mb-2" data-bs-toggle="modal" data-bs-target="#accountModal" data-bs-dismiss="offcanvas">
+          <i class="bi bi-person me-2"></i> Client Sign In
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-bg-overlay"></div>
+    <div class="container position-relative">
+      <div class="hero-content">
+        <span class="hero-subtitle">Autumn / Winter Atelier Collection</span>
+        <h1 class="hero-title">Define Your Style.</h1>
+        <p class="hero-description">
+          Elevated sartorial garments engineered with Italian precision and sculpted from the finest noble textiles. Modern architectural cuts made for effortless distinction.
+        </p>
+        <div class="hero-buttons">
+          <a href="shop.html?gender=men" class="btn-atelier-light">
+            Shop Men <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+          <a href="shop.html?gender=women" class="btn-atelier-outline text-white border-white">
+            Shop Women <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Featured Categories Section -->
+  <section class="py-5 my-md-4">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Curated Wardrobe</span>
+        <h2 class="section-title">Featured Categories</h2>
+        <p class="section-description">Explore foundational silhouettes built for enduring style and refined everyday wear.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Category 1: Jackets -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <a href="shop.html?category=jackets" class="category-card">
+            <img src="https://images.unsplash.com/photo-1544923246-77307dd654cb?auto=format&fit=crop&w=800&q=80" alt="Jackets & Coats">
+            <div class="category-overlay">
+              <h4 class="category-name">Outerwear & Coats</h4>
+              <span class="category-link">Discover Range <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Category 2: Shirts & Linen -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <a href="shop.html?category=shirts" class="category-card">
+            <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80" alt="Tailored Shirts">
+            <div class="category-overlay">
+              <h4 class="category-name">Artisanal Shirts</h4>
+              <span class="category-link">Discover Range <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Category 3: Trousers & Denim -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <a href="shop.html?category=trousers" class="category-card">
+            <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=800&q=80" alt="Trousers & Tailoring">
+            <div class="category-overlay">
+              <h4 class="category-name">Tailored Trousers</h4>
+              <span class="category-link">Discover Range <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Category 4: Shoes & Accessories -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <a href="shop.html?category=shoes" class="category-card">
+            <img src="https://images.unsplash.com/photo-1638247025967-b4e38f787b76?auto=format&fit=crop&w=800&q=80" alt="Handcrafted Shoes">
+            <div class="category-overlay">
+              <h4 class="category-name">Handmade Footwear</h4>
+              <span class="category-link">Discover Range <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrivals Section -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+        <div>
+          <span class="section-subtitle text-start">Just Arrived</span>
+          <h2 class="section-title text-start mb-0">New Arrivals</h2>
+        </div>
+        <div class="mt-3 mt-md-0">
+          <a href="shop.html?filter=new" class="btn-atelier-outline py-2 px-4">
+            View All New Pieces <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dynamic New Arrivals Grid -->
+      <div class="row g-4" id="homeNewArrivalsGrid">
+        <!-- Rendered dynamically by home script -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Lookbook Banner -->
+  <section class="promo-banner">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-12 col-lg-6">
+          <span class="badge bg-warning text-dark px-3 py-2 text-uppercase fw-bold mb-3" style="letter-spacing: 0.15em; font-size: 11px;">Limited Edition Capsule</span>
+          <h2 class="font-serif text-white display-5 mb-3">The Milan Heritage Collection</h2>
+          <p class="text-white-50 lead mb-4">
+            A rare release of Italian double-faced cashmere and hand-burnished vacchetta leather. Crafted in limited quantities of only 150 individually numbered pieces.
+          </p>
+
+          <!-- Interactive Countdown -->
+          <div class="countdown-box">
+            <div class="countdown-item">
+              <div class="countdown-num" id="cdDays">04</div>
+              <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-num" id="cdHours">18</div>
+              <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-num" id="cdMins">42</div>
+              <div class="countdown-label">Mins</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-num" id="cdSecs">59</div>
+              <div class="countdown-label">Secs</div>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <a href="shop.html" class="btn-atelier-gold">
+              Explore Capsule Collection <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="position-relative p-2 border border-secondary rounded">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85" alt="Milan Heritage Capsule" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Sellers Section -->
+  <section class="py-5 my-md-4">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Wardrobe Essentials</span>
+        <h2 class="section-title">Most Coveted Pieces</h2>
+        <p class="section-description">Our signature icons, celebrated by fashion critics and worn across the world's style capitals.</p>
+      </div>
+
+      <div class="row g-4" id="homeBestSellersGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us (The Valenti Standard) -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container py-md-3">
+      <div class="section-header">
+        <span class="section-subtitle">The Atelier Promise</span>
+        <h2 class="section-title">The Valenti Standard</h2>
+        <p class="section-description">Uncompromising dedication to ethical sourcing, master craftsmanship, and client luxury.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="feature-box">
+            <i class="bi bi-gem feature-icon"></i>
+            <h4 class="feature-title">Master Craftsmanship</h4>
+            <p class="feature-desc">Engineered in partnership with historic family-run mills in Tuscany and Biella, using hand-stitched details.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="feature-box">
+            <i class="bi bi-flower1 feature-icon"></i>
+            <h4 class="feature-title">Sustainable Luxury</h4>
+            <p class="feature-desc">100% traceable organic fibers, GOTS-certified dyes, and zero single-use plastics across our packaging.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="feature-box">
+            <i class="bi bi-airplane feature-icon"></i>
+            <h4 class="feature-title">Global Express Delivery</h4>
+            <p class="feature-desc">Complimentary carbon-neutral express courier on all worldwide orders over $150 with tracked delivery.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="feature-box">
+            <i class="bi bi-shield-check feature-icon"></i>
+            <h4 class="feature-title">Bespoke Guarantee</h4>
+            <p class="feature-desc">Complimentary 30-day returns and exchanges, along with lifetime repair support for signature outerwear.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Reviews / Testimonials -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Voices of Connoisseurs</span>
+        <h2 class="section-title">Client Perspectives</h2>
+        <p class="section-description">Read what editors, stylists, and discerning international clients say about Valenti Atelier.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Review 1 -->
+        <div class="col-12 col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-quote"><i class="bi bi-quote"></i></div>
+            <p class="testimonial-text">
+              "The Cashmere Wool Overcoat is cut with a silhouette that rivals historic savile row houses. The drape is effortless and the fabric has an unmistakable richness."
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Elena Rostova" class="author-avatar">
+              <div>
+                <h6 class="author-name">Elena Rostova</h6>
+                <span class="author-role">Fashion Editor, Milan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="col-12 col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-quote"><i class="bi bi-quote"></i></div>
+            <p class="testimonial-text">
+              "Finding raw selvedge denim tailored with this level of architectural precision is virtually impossible. Valenti Atelier has mastered the modern luxury uniform."
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Marcus Vance" class="author-avatar">
+              <div>
+                <h6 class="author-name">Marcus Vance</h6>
+                <span class="author-role">Creative Director, London</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="col-12 col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-quote"><i class="bi bi-quote"></i></div>
+            <p class="testimonial-text">
+              "The Weekender Bag and Suede Chelsea Boots have accompanied me on four continents this year. They age like vintage wine. Unmatched quality."
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Sophia Chen" class="author-avatar">
+              <div>
+                <h6 class="author-name">Sophia Chen</h6>
+                <span class="author-role">Architect & Collector, Tokyo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Subscription Section -->
+  <section class="newsletter-section text-center">
+    <div class="container">
+      <span class="section-subtitle">Join The Atelier Circle</span>
+      <h2 class="section-title mb-3">Privileged Access & Private Previews</h2>
+      <p class="section-description mb-4">
+        Subscribe to receive invitations to private runway presentations, editorial lookbooks, and receive an instant 15% voucher code for your initial order.
+      </p>
+
+      <form class="newsletter-form">
+        <input type="email" class="form-control newsletter-input" placeholder="Enter your email address..." required>
+        <button type="submit" class="btn-atelier-dark text-nowrap">
+          Subscribe <i class="bi bi-arrow-right"></i>
+        </button>
+      </form>
+      <div class="text-muted small mt-3">We respect your privacy. Unsubscribe at any moment.</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="atelier-footer">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Brand Info -->
+        <div class="col-12 col-lg-4">
+          <div class="brand-logo text-white mb-3">
+            <span>VALENTI</span>
+            <span class="brand-logo-sub text-white-50">Atelier</span>
+          </div>
+          <p class="text-white-50 small pe-lg-4">
+            Founded on the pillars of timeless elegance, ethical sustainability, and bespoke tailoring. Engineered for modern tastemakers across the globe.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link" title="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="social-link" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+
+        <!-- Collections Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Collections</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=jackets">Outerwear</a></li>
+            <li><a href="shop.html?category=shirts">Tailored Shirts</a></li>
+            <li><a href="shop.html?category=t-shirts">Premium Tees</a></li>
+            <li><a href="shop.html?category=hoodies">Hoodies</a></li>
+            <li><a href="shop.html?category=trousers">Trousers</a></li>
+            <li><a href="shop.html?category=jeans">Selvedge Denim</a></li>
+            <li><a href="shop.html?category=shoes">Shoes & Boots</a></li>
+          </ul>
+        </div>
+
+        <!-- Boutique Services -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Concierge</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">Atelier Story</a></li>
+            <li><a href="contact.html">Flagship Boutiques</a></li>
+            <li><a href="contact.html">Client Care</a></li>
+            <li><a href="contact.html">Shipping & Returns</a></li>
+            <li><a href="contact.html">Garment Care</a></li>
+            <li><a href="contact.html">FAQ</a></li>
+            <li><a href="admin.html" class="text-warning"><i class="bi bi-gear me-1"></i>Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Flagship Locations -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5 class="footer-heading">Flagship Boutiques</h5>
+          <p class="text-white-50 small mb-2">
+            <strong>Milan:</strong> Via Monte Napoleone 8, 20121 Milano<br>
+            <strong>Paris:</strong> 24 Rue du Faubourg Saint-Honoré, 75008 Paris<br>
+            <strong>New York:</strong> 740 Madison Avenue, NY 10065
+          </p>
+          <div class="mt-4 pt-2">
+            <span class="text-white small d-block mb-2">Accepted Payment Methods:</span>
+            <div class="d-flex gap-2 fs-4 text-white-50">
+              <i class="bi bi-credit-card-2-front" title="Visa / Mastercard"></i>
+              <i class="bi bi-paypal" title="PayPal"></i>
+              <i class="bi bi-apple" title="Apple Pay"></i>
+              <i class="bi bi-shield-lock" title="Encrypted SSL Checkout"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="mb-2 mb-md-0 text-white-50 small">
+          &copy; 2026 VALENTI ATELIER Inc. All Rights Reserved. Crafted with passion.
+        </p>
+        <div class="d-flex gap-3 small">
+          <a href="#" class="text-white-50">Privacy Policy</a>
+          <a href="#" class="text-white-50">Terms of Service</a>
+          <a href="admin.html" class="text-warning fw-semibold"><i class="bi bi-shield-lock me-1"></i>Admin Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Offcanvas Shopping Cart Drawer -->
+  <div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title font-serif" id="offcanvasCartLabel">
+        <i class="bi bi-bag me-2"></i> Your Shopping Bag (<span class="cart-badge-count">0</span>)
+      </h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body p-4">
+      <!-- Free Shipping Progress Bar -->
+      <div class="free-shipping-progress">
+        <div class="small" id="freeShippingText">
+          Add <strong>$150.00</strong> more to unlock <strong>Complimentary Express Shipping</strong>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="freeShippingFill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Empty State -->
+      <div id="offcanvasCartEmpty" class="text-center py-5" style="display: none;">
+        <i class="bi bi-bag-x fs-1 text-muted d-block mb-3"></i>
+        <h5 class="font-serif">Your bag is currently empty</h5>
+        <p class="text-muted small">Explore our latest arrivals and timeless wardrobe staples.</p>
+        <a href="shop.html" class="btn-atelier-dark mt-2" data-bs-dismiss="offcanvas">Explore Collection</a>
+      </div>
+
+      <!-- Cart Item Rows Container -->
+      <div id="offcanvasCartItems"></div>
+    </div>
+
+    <!-- Offcanvas Footer -->
+    <div class="p-4 border-top bg-white" id="offcanvasCartFooter">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="text-muted small">Estimated Subtotal</span>
+        <span class="fs-5 fw-bold text-dark" id="offcanvasCartSubtotal">$0.00</span>
+      </div>
+      <p class="text-muted small mb-3">Taxes and express shipping calculated at checkout.</p>
+      <div class="d-grid gap-2">
+        <a href="checkout.html" class="btn-atelier-dark text-center">
+          Proceed to Checkout <i class="bi bi-lock-fill ms-1"></i>
+        </a>
+        <a href="cart.html" class="btn btn-sm text-dark text-center text-uppercase fw-semibold py-2" style="font-size: 11px; letter-spacing: 0.1em;">
+          View Full Bag & Apply Promo Code
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content rounded-1 border-0">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 pt-0">
+          <div class="row g-4 align-items-center">
+            <div class="col-12 col-md-6">
+              <div class="product-image-wrap rounded">
+                <img id="qvModalImage" src="" alt="Product" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <span class="product-category" id="qvModalCategory">Category</span>
+              <h3 class="font-serif mt-1 mb-2" id="qvModalTitle">Product Title</h3>
+              <div class="d-flex align-items-baseline gap-2 mb-3">
+                <span class="fs-4 fw-bold text-dark" id="qvModalPrice">$0.00</span>
+                <span class="text-muted text-decoration-line-through" id="qvModalOriginalPrice" style="display: none;">$0.00</span>
+              </div>
+              <p class="text-muted small mb-4" id="qvModalDescription">Product description...</p>
+
+              <div class="mb-3">
+                <label class="form-label small fw-semibold text-uppercase" style="letter-spacing: 0.1em;">Select Size</label>
+                <div class="size-selector" id="qvModalSizes"></div>
+              </div>
+
+              <div class="d-grid gap-2 mt-4">
+                <button type="button" class="btn-atelier-dark w-100" id="qvModalAddToCart" onclick="handleQuickViewAddToCart()">
+                  Add to Shopping Bag <i class="bi bi-bag ms-2"></i>
+                </button>
+                <a href="#" id="qvModalViewDetails" class="text-center text-dark small fw-semibold py-2 text-uppercase" style="letter-spacing: 0.1em;">
+                  View Full Product Details <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content search-modal-content border-0">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="small text-uppercase fw-bold text-gold" style="letter-spacing: 0.15em;">Search Atelier</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <input type="text" id="liveSearchInput" class="search-input-lg" placeholder="Search jackets, linen shirts, cashmere, denim..." autofocus>
+        <div id="liveSearchResults" class="search-results-list">
+          <p class="text-muted small my-3">Popular Searches: <a href="shop.html?category=jackets" class="text-dark text-decoration-underline me-2">Overcoats</a>, <a href="shop.html?category=shirts" class="text-dark text-decoration-underline me-2">Linen Shirts</a>, <a href="shop.html?category=jeans" class="text-dark text-decoration-underline me-2">Selvedge Denim</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Account / Login Modal -->
+  <div class="modal fade" id="accountModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 440px;">
+      <div class="modal-content rounded-1 p-4 border-0">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="font-serif mb-0">Client Sign In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <p class="text-muted small mb-4">Access your order status, bespoke wishlist, and private member perks.</p>
+
+        <form onsubmit="event.preventDefault(); showToast('Welcome back to the Atelier, client!', 'success'); bootstrap.Modal.getInstance(document.getElementById('accountModal')).hide();">
+          <div class="mb-3">
+            <label class="form-label small text-uppercase fw-semibold">Email Address</label>
+            <input type="email" class="form-control" required placeholder="client@atelier.com">
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <label class="form-label small text-uppercase fw-semibold">Password</label>
+              <a href="#" class="small text-muted text-decoration-underline">Forgot?</a>
+            </div>
+            <input type="password" class="form-control" required placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+          </div>
+          <div class="d-grid mt-4">
+            <button type="submit" class="btn-atelier-dark">Sign In to Atelier</button>
+          </div>
+        </form>
+        <div class="text-center mt-3 pt-3 border-top small text-muted">
+          New to Valenti Atelier? <a href="#" class="text-dark fw-bold text-decoration-underline">Create Private Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Home Page Specific Renderer Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Render New Arrivals (top 4)
+      const newGrid = document.getElementById('homeNewArrivalsGrid');
+      if (newGrid && typeof PRODUCTS_DATA !== 'undefined') {
+        const arrivals = PRODUCTS_DATA.filter(p => p.isNew).slice(0, 4);
+        let html = '';
+        arrivals.forEach(product => {
+          const isWished = isInWishlist(product.id);
+          html += `
+            <div class="col-6 col-md-3">
+              <div class="product-card">
+                <div class="product-image-wrap">
+                  <div class="product-badges">
+                    <span class="badge-tag badge-new">New</span>
+                    ${product.onSale ? `<span class="badge-tag badge-sale">Sale</span>` : ''}
+                  </div>
+                  <div class="product-actions">
+                    <button class="btn-card-action ${isWished ? 'active-wishlist' : ''}" data-wishlist-id="${product.id}" title="Wishlist">
+                      <i class="bi ${isWished ? 'bi-heart-fill' : 'bi-heart'}"></i>
+                    </button>
+                    <button class="btn-card-action" data-quickview-id="${product.id}" title="Quick View">
+                      <i class="bi bi-eye"></i>
+                    </button>
+                  </div>
+                  <a href="product-details.html?id=${product.id}">
+                    <img src="${product.images[0]}" alt="${product.name}" class="img-primary">
+                    <img src="${product.images[1] || product.images[0]}" alt="${product.name}" class="img-secondary">
+                  </a>
+                  <div class="quick-add-bar">
+                    <span class="text-white small me-1">Quick Add:</span>
+                    ${product.sizes.map(sz => `<button type="button" class="quick-size-btn" onclick="addToCart('${product.id}', '${sz}')">${sz}</button>`).join('')}
+                  </div>
+                </div>
+                <div class="product-info">
+                  <span class="product-category">${product.categoryLabel}</span>
+                  <h5 class="product-title"><a href="product-details.html?id=${product.id}">${product.name}</a></h5>
+                  <div class="product-rating">
+                    <i class="bi bi-star-fill"></i>
+                    <span>${product.rating.toFixed(1)}</span>
+                    <span class="count">(${product.reviewsCount})</span>
+                  </div>
+                  <div class="product-price-wrap">
+                    <span class="product-price">${formatPrice(product.price)}</span>
+                    ${product.originalPrice ? `<span class="product-original-price">${formatPrice(product.originalPrice)}</span>` : ''}
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+        newGrid.innerHTML = html;
+      }
+
+      // Render Best Sellers (top 4)
+      const bestGrid = document.getElementById('homeBestSellersGrid');
+      if (bestGrid && typeof PRODUCTS_DATA !== 'undefined') {
+        const bestSellers = PRODUCTS_DATA.filter(p => p.isBestSeller).slice(0, 4);
+        let html = '';
+        bestSellers.forEach(product => {
+          const isWished = isInWishlist(product.id);
+          html += `
+            <div class="col-6 col-md-3">
+              <div class="product-card">
+                <div class="product-image-wrap">
+                  <div class="product-badges">
+                    <span class="badge-tag badge-bestseller">Bestseller</span>
+                  </div>
+                  <div class="product-actions">
+                    <button class="btn-card-action ${isWished ? 'active-wishlist' : ''}" data-wishlist-id="${product.id}" title="Wishlist">
+                      <i class="bi ${isWished ? 'bi-heart-fill' : 'bi-heart'}"></i>
+                    </button>
+                    <button class="btn-card-action" data-quickview-id="${product.id}" title="Quick View">
+                      <i class="bi bi-eye"></i>
+                    </button>
+                  </div>
+                  <a href="product-details.html?id=${product.id}">
+                    <img src="${product.images[0]}" alt="${product.name}" class="img-primary">
+                    <img src="${product.images[1] || product.images[0]}" alt="${product.name}" class="img-secondary">
+                  </a>
+                  <div class="quick-add-bar">
+                    <span class="text-white small me-1">Quick Add:</span>
+                    ${product.sizes.map(sz => `<button type="button" class="quick-size-btn" onclick="addToCart('${product.id}', '${sz}')">${sz}</button>`).join('')}
+                  </div>
+                </div>
+                <div class="product-info">
+                  <span class="product-category">${product.categoryLabel}</span>
+                  <h5 class="product-title"><a href="product-details.html?id=${product.id}">${product.name}</a></h5>
+                  <div class="product-rating">
+                    <i class="bi bi-star-fill"></i>
+                    <span>${product.rating.toFixed(1)}</span>
+                    <span class="count">(${product.reviewsCount})</span>
+                  </div>
+                  <div class="product-price-wrap">
+                    <span class="product-price">${formatPrice(product.price)}</span>
+                    ${product.originalPrice ? `<span class="product-original-price">${formatPrice(product.originalPrice)}</span>` : ''}
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+        bestGrid.innerHTML = html;
+      }
+
+      // Promotional Countdown Ticker
+      let totalSeconds = 4 * 86400 + 18 * 3600 + 42 * 60 + 59;
+      setInterval(() => {
+        if (totalSeconds > 0) {
+          totalSeconds--;
+          const days = Math.floor(totalSeconds / 86400);
+          const hours = Math.floor((totalSeconds % 86400) / 3600);
+          const minutes = Math.floor((totalSeconds % 3600) / 60);
+          const seconds = totalSeconds % 60;
+
+          document.getElementById('cdDays').textContent = String(days).padStart(2, '0');
+          document.getElementById('cdHours').textContent = String(hours).padStart(2, '0');
+          document.getElementById('cdMins').textContent = String(minutes).padStart(2, '0');
+          document.getElementById('cdSecs').textContent = String(seconds).padStart(2, '0');
+        }
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

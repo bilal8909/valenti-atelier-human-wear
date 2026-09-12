@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | VALENTI ATELIER</title>
+  <meta name="description" content="Secure, encrypted checkout for VALENTI ATELIER luxury garments. Complimentary global delivery and bespoke client services.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Luxury Design System -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+
+  <!-- Minimal Checkout Header -->
+  <header class="py-3 bg-white border-bottom">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="brand-logo" href="index.html">
+        <span>VALENTI</span>
+        <span class="brand-logo-sub">Atelier</span>
+      </a>
+      <div class="d-flex align-items-center gap-2 small text-muted">
+        <i class="bi bi-shield-lock-fill text-success fs-5"></i>
+        <span>Bank-Level 256-Bit SSL Encrypted Checkout</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Checkout Container -->
+  <div class="container py-5">
+
+    <!-- Empty Bag Notification -->
+    <div id="checkoutEmptyAlert" class="text-center py-5 my-5 bg-white border rounded p-4" style="display: none; max-width: 600px; margin: 0 auto;">
+      <i class="bi bi-bag-x fs-1 text-muted mb-3 d-block"></i>
+      <h3 class="font-serif">Your shopping bag is empty</h3>
+      <p class="text-muted">You do not have any items reserved for checkout.</p>
+      <a href="shop.html" class="btn-atelier-dark mt-2">Explore Collections</a>
+    </div>
+
+    <!-- Active Checkout Form Wrapper -->
+    <div class="row g-5" id="checkoutFormWrapper">
+
+      <!-- Left Column: Checkout Forms -->
+      <div class="col-12 col-lg-7">
+        <form id="checkoutMainForm" novalidate>
+
+          <!-- Step 1: Customer Contact -->
+          <div class="bg-white border rounded p-4 mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="font-serif mb-0">1. Client Contact Details</h5>
+              <span class="small text-muted">Already have an account? <a href="#" class="text-dark fw-bold text-decoration-underline" data-bs-toggle="modal" data-bs-target="#accountModal">Sign In</a></span>
+            </div>
+            <div class="row g-3">
+              <div class="col-12">
+                <label for="customerEmail" class="form-label small text-uppercase fw-semibold">Email Address for Order Confirmation</label>
+                <input type="email" class="form-control" id="customerEmail" required placeholder="client@luxury.com">
+                <div class="invalid-feedback">A valid email address is required.</div>
+              </div>
+              <div class="col-12">
+                <label for="customerPhone" class="form-label small text-uppercase fw-semibold">Mobile Phone (For courier delivery SMS)</label>
+                <input type="tel" class="form-control" id="customerPhone" required placeholder="+1 (555) 000-0000">
+                <div class="invalid-feedback">Please provide your mobile number.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Shipping Destination -->
+          <div class="bg-white border rounded p-4 mb-4">
+            <h5 class="font-serif mb-3">2. Shipping Destination</h5>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label class="form-label small text-uppercase fw-semibold">First Name</label>
+                <input type="text" class="form-control" required placeholder="Julian">
+                <div class="invalid-feedback">First name is required.</div>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label small text-uppercase fw-semibold">Last Name</label>
+                <input type="text" class="form-control" required placeholder="Sterling">
+                <div class="invalid-feedback">Last name is required.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label small text-uppercase fw-semibold">Street Address</label>
+                <input type="text" class="form-control" required placeholder="740 Madison Avenue">
+                <div class="invalid-feedback">Street address is required.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label small text-uppercase fw-semibold">Apartment, Suite, Penthouse (Optional)</label>
+                <input type="text" class="form-control" placeholder="Penthouse 4B">
+              </div>
+              <div class="col-sm-5">
+                <label class="form-label small text-uppercase fw-semibold">City</label>
+                <input type="text" class="form-control" required placeholder="New York">
+                <div class="invalid-feedback">City is required.</div>
+              </div>
+              <div class="col-sm-4">
+                <label class="form-label small text-uppercase fw-semibold">State / Region</label>
+                <select class="form-select" required>
+                  <option value="">Select State</option>
+                  <option value="NY" selected>New York (NY)</option>
+                  <option value="CA">California (CA)</option>
+                  <option value="FL">Florida (FL)</option>
+                  <option value="TX">Texas (TX)</option>
+                  <option value="IL">Illinois (IL)</option>
+                  <option value="INTL">International</option>
+                </select>
+                <div class="invalid-feedback">Please select a state or region.</div>
+              </div>
+              <div class="col-sm-3">
+                <label class="form-label small text-uppercase fw-semibold">Postal Code</label>
+                <input type="text" class="form-control" required placeholder="10065">
+                <div class="invalid-feedback">Postal code required.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label small text-uppercase fw-semibold">Country</label>
+                <select class="form-select" required>
+                  <option value="US" selected>United States</option>
+                  <option value="IT">Italy</option>
+                  <option value="FR">France</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="JP">Japan</option>
+                  <option value="CA">Canada</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Shipping Method Selection -->
+          <div class="bg-white border rounded p-4 mb-4">
+            <h5 class="font-serif mb-3">3. Delivery Courier Method</h5>
+            <div class="form-check p-3 border rounded mb-2">
+              <input class="form-check-input" type="radio" name="shippingMethod" id="shippingStandard" value="0" checked>
+              <label class="form-check-label d-flex justify-content-between w-100" for="shippingStandard">
+                <div>
+                  <strong>Standard Carbon-Neutral Express (3-5 Business Days)</strong>
+                  <div class="text-muted small">Signature required upon arrival &bull; Tracking included</div>
+                </div>
+                <span class="text-success fw-bold">Complimentary</span>
+              </label>
+            </div>
+
+            <div class="form-check p-3 border rounded">
+              <input class="form-check-input" type="radio" name="shippingMethod" id="shippingExpress" value="25">
+              <label class="form-check-label d-flex justify-content-between w-100" for="shippingExpress">
+                <div>
+                  <strong>Bespoke Priority Courier (1-2 Business Days)</strong>
+                  <div class="text-muted small">Dispatched within 2 hours with dedicated concierge tracking</div>
+                </div>
+                <span class="fw-bold">$25.00</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 4: Payment Method -->
+          <div class="bg-white border rounded p-4 mb-4">
+            <h5 class="font-serif mb-3">4. Payment Authorization</h5>
+
+            <div class="d-flex gap-3 mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="payCard" value="credit-card" checked>
+                <label class="form-check-label fw-semibold" for="payCard">
+                  Credit / Debit Card
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="payPaypal" value="paypal">
+                <label class="form-check-label fw-semibold" for="payPaypal">
+                  PayPal / Apple Pay
+                </label>
+              </div>
+            </div>
+
+            <!-- Credit Card Fields -->
+            <div id="creditCardFields">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label small text-uppercase fw-semibold">Card Number</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="4242 &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 4242" required maxlength="19">
+                    <span class="input-group-text bg-white"><i class="bi bi-credit-card-2-front"></i></span>
+                  </div>
+                  <div class="invalid-feedback">Card number is required.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label small text-uppercase fw-semibold">Expiration Date</label>
+                  <input type="text" class="form-control" placeholder="MM / YY" required maxlength="7">
+                  <div class="invalid-feedback">Expiration required.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label small text-uppercase fw-semibold">Security Code (CVV)</label>
+                  <input type="text" class="form-control" placeholder="CVC" required maxlength="4">
+                  <div class="invalid-feedback">Security code required.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label small text-uppercase fw-semibold">Name on Card</label>
+                  <input type="text" class="form-control" placeholder="Julian Sterling" required>
+                  <div class="invalid-feedback">Name on card required.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Alternative PayPal/Apple Pay Info -->
+            <div id="paypalFields" style="display: none;">
+              <div class="p-3 bg-light border rounded text-center my-2">
+                <i class="bi bi-paypal fs-2 text-primary d-block mb-1"></i>
+                <p class="small text-muted mb-0">After clicking "Place Order", you will be safely directed to complete authorization with your biometric Apple Pay or PayPal wallet.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Place Order Button -->
+          <div class="d-grid mb-5">
+            <button type="submit" class="btn-atelier-gold py-3 fs-6" id="placeOrderBtn">
+              Authorize Payment &amp; Place Order <i class="bi bi-arrow-right ms-2"></i>
+            </button>
+            <div class="text-center text-muted small mt-2">
+              By authorizing payment, you confirm agreement with our Atelier Terms of Sale and Privacy Charter.
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Right Column: Live Order Summary -->
+      <div class="col-12 col-lg-5">
+        <div class="bg-white border rounded p-4 sticky-top" style="top: 100px;">
+          <h5 class="font-serif mb-3">Order Summary</h5>
+
+          <!-- Items List -->
+          <div id="checkoutItemsList" class="mb-3" style="max-height: 280px; overflow-y: auto;">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- Promo Code Input -->
+          <div class="mb-3">
+            <label class="form-label small text-uppercase fw-semibold" style="letter-spacing: 0.08em;">Gift Card / Promotional Voucher</label>
+            <div class="input-group">
+              <input type="text" id="promoCodeInput" class="form-control form-control-sm" placeholder="e.g. VALENTI10">
+              <button class="btn btn-dark btn-sm text-uppercase px-3" type="button" id="applyPromoBtn">Apply</button>
+            </div>
+            <div id="promoMessage"></div>
+          </div>
+
+          <hr style="border-color: var(--color-border);">
+
+          <div class="d-flex justify-content-between small text-secondary mb-2">
+            <span>Subtotal</span>
+            <span class="text-dark fw-semibold" id="checkoutSubtotal">$0.00</span>
+          </div>
+
+          <div class="d-flex justify-content-between small text-secondary mb-2" id="checkoutDiscountRow" style="display: none;">
+            <span>Discount (Voucher)</span>
+            <span class="text-success fw-semibold" id="checkoutDiscount">-$0.00</span>
+          </div>
+
+          <div class="d-flex justify-content-between small text-secondary mb-2">
+            <span>Shipping Courier</span>
+            <span class="text-dark fw-semibold" id="checkoutShipping">Complimentary</span>
+          </div>
+
+          <div class="d-flex justify-content-between small text-secondary mb-3">
+            <span>Estimated Sales Tax (5%)</span>
+            <span class="text-dark fw-semibold" id="checkoutTax">$0.00</span>
+          </div>
+
+          <hr style="border-color: var(--color-border);">
+
+          <div class="d-flex justify-content-between align-items-baseline mb-4">
+            <span class="font-serif fw-bold fs-5">Total Order Value</span>
+            <span class="display-6 fw-bold text-dark" id="checkoutTotal">$0.00</span>
+          </div>
+
+          <div class="p-3 bg-light rounded small text-secondary">
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <i class="bi bi-award text-gold"></i>
+              <strong>The Valenti White-Glove Guarantee</strong>
+            </div>
+            Includes signature embossed presentation box, silk garment dust-bag, and certificate of authentic Italian craftsmanship.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Order Success Confirmation Modal -->
+  <div class="modal fade" id="orderSuccessModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 520px;">
+      <div class="modal-content rounded-1 p-4 border-0 text-center">
+        <div class="mb-3">
+          <div class="d-inline-flex align-items-center justify-content-center bg-success text-white rounded-circle" style="width: 64px; height: 64px;">
+            <i class="bi bi-check-lg fs-2"></i>
+          </div>
+        </div>
+        <span class="text-gold text-uppercase fw-bold small" style="letter-spacing: 0.2em;">Order Confirmed</span>
+        <h3 class="font-serif mt-1 mb-2">Grazie! Your order has been placed.</h3>
+        <p class="text-muted small mb-4">
+          A receipt and courier tracking dossier have been dispatched to <strong id="confirmedEmail">your email</strong>.
+        </p>
+
+        <div class="bg-light border rounded p-3 text-start small mb-4">
+          <div class="d-flex justify-content-between mb-2">
+            <span class="text-muted">Order Identifier:</span>
+            <strong class="font-monospace text-dark" id="confirmedOrderNumber">VAL-894120</strong>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span class="text-muted">Estimated Delivery:</span>
+            <strong class="text-dark" id="confirmedDeliveryDate">Monday, Oct 12, 2026</strong>
+          </div>
+          <div class="d-flex justify-content-between">
+            <span class="text-muted">Courier:</span>
+            <strong class="text-dark">DHL Express Worldwide Concierge</strong>
+          </div>
+        </div>
+
+        <div class="d-grid gap-2">
+          <a href="shop.html" class="btn-atelier-dark">
+            Continue Exploring Collections <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+          <button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.print()">
+            <i class="bi bi-printer me-1"></i> Print Order Receipt
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Account Modal -->
+  <div class="modal fade" id="accountModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 440px;">
+      <div class="modal-content rounded-1 p-4 border-0">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="font-serif mb-0">Client Sign In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form onsubmit="event.preventDefault(); showToast('Welcome back!', 'success'); bootstrap.Modal.getInstance(document.getElementById('accountModal')).hide();">
+          <div class="mb-3">
+            <label class="form-label small text-uppercase fw-semibold">Email</label>
+            <input type="email" class="form-control" required placeholder="client@atelier.com">
+          </div>
+          <div class="mb-3">
+            <label class="form-label small text-uppercase fw-semibold">Password</label>
+            <input type="password" class="form-control" required placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+          </div>
+          <button type="submit" class="btn-atelier-dark w-100">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

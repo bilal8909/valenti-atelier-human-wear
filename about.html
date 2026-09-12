@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About The Atelier | VALENTI ATELIER</title>
+  <meta name="description" content="Discover the philosophy, heritage, Italian craftsmanship, and sustainable values behind VALENTI ATELIER luxury ready-to-wear.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Luxury Design System -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar text-center">
+    <div class="container">
+      Complimentary Express Shipping on Orders Over $150 &nbsp;|&nbsp;
+      Use code <a href="shop.html">VALENTI10</a> for 10% Off
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar navbar-expand-lg sticky-top atelier-navbar">
+    <div class="container">
+      <button class="navbar-toggler border-0 p-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas">
+        <i class="bi bi-list fs-2 text-dark"></i>
+      </button>
+
+      <a class="brand-logo" href="index.html">
+        <span>VALENTI</span>
+        <span class="brand-logo-sub">Atelier</span>
+      </a>
+
+      <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html?gender=men">Men</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html?gender=women">Women</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html?filter=new">New Arrivals</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="d-flex align-items-center gap-1">
+        <button class="nav-icon-btn" data-bs-toggle="modal" data-bs-target="#searchModal" title="Search catalog">
+          <i class="bi bi-search"></i>
+        </button>
+        <button class="nav-icon-btn d-none d-sm-inline-flex" data-bs-toggle="modal" data-bs-target="#accountModal" title="Account login">
+          <i class="bi bi-person"></i>
+        </button>
+        <a href="shop.html?filter=wishlist" class="nav-icon-btn" title="Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="badge-counter wishlist-badge-count" style="display: none;">0</span>
+        </a>
+        <button class="nav-icon-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" title="Shopping Bag">
+          <i class="bi bi-bag"></i>
+          <span class="badge-counter cart-badge-count" style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas" style="width: 320px;">
+    <div class="offcanvas-header border-bottom">
+      <div class="brand-logo">
+        <span>VALENTI</span>
+        <span class="brand-logo-sub">Atelier</span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body p-4">
+      <ul class="list-unstyled mb-4">
+        <li class="py-2 border-bottom"><a href="index.html" class="fw-semibold text-dark text-uppercase small">Home</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html" class="fw-semibold text-dark text-uppercase small">All Collections</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html?gender=men" class="fw-semibold text-dark text-uppercase small">Men's Atelier</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html?gender=women" class="fw-semibold text-dark text-uppercase small">Women's Atelier</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html?filter=new" class="fw-semibold text-dark text-uppercase small">New Arrivals</a></li>
+        <li class="py-2 border-bottom"><a href="about.html" class="fw-semibold text-dark text-uppercase small">Brand Story & Craft</a></li>
+        <li class="py-2 border-bottom"><a href="contact.html" class="fw-semibold text-dark text-uppercase small">Boutiques & Contact</a></li>
+        <li class="py-2"><a href="cart.html" class="fw-semibold text-dark text-uppercase small">View Shopping Bag</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- About Hero -->
+  <header class="py-5 bg-white border-bottom text-center">
+    <div class="container py-md-4">
+      <span class="section-subtitle">Heritage & Vision</span>
+      <h1 class="display-4 font-serif mb-3">The Art of Modern Elegance</h1>
+      <p class="text-secondary lead mx-auto" style="max-width: 680px;">
+        VALENTI ATELIER was founded with a singular conviction: that luxury fashion should transcend transient trends, celebrating enduring silhouettes, noble textiles, and master tailoring.
+      </p>
+    </div>
+  </header>
+
+  <!-- Brand Story Section -->
+  <section class="py-5 my-md-4">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-12 col-lg-6">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=85" alt="Atelier Craftsmanship" class="img-fluid rounded">
+            <div class="position-absolute bottom-0 end-0 bg-dark text-white p-3 p-md-4 rounded m-3 m-md-4 shadow" style="max-width: 260px;">
+              <span class="text-gold small text-uppercase fw-bold d-block mb-1">Established</span>
+              <div class="font-serif fs-4 fw-bold">Milano, Italia</div>
+              <small class="text-white-50">Generations of artisanal textile tradition.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <span class="section-subtitle text-start">Our Origin</span>
+          <h2 class="font-serif mb-4">Born in Milan. Worn Around the Globe.</h2>
+          <p class="text-secondary mb-3">
+            What began as an intimate bespoke tailoring workshop in Milan's Brera district has evolved into an international luxury house. Every garment in our collection is born from meticulous architectural drafting and an unwavering obsession with touch.
+          </p>
+          <p class="text-secondary mb-4">
+            We reject the disposable rhythms of fast-moving fashion. Instead, we craft limited, numbered collections that develop character and graceful patina with each passing season.
+          </p>
+          <div class="row g-3 pt-2">
+            <div class="col-6">
+              <div class="border-start border-2 border-dark ps-3">
+                <span class="display-6 font-serif fw-bold d-block text-dark">100%</span>
+                <span class="text-muted small">Traceable Italian & European noble fibers</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="border-start border-2 border-dark ps-3">
+                <span class="display-6 font-serif fw-bold d-block text-dark">150</span>
+                <span class="text-muted small">Max edition quantity per seasonal run</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lookbook Gallery Showcase -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Visual Dialogue</span>
+        <h2 class="section-title">The Atelier Lookbook</h2>
+        <p class="section-description">A glimpse into our seasonal studies in form, shadow, and architectural draping.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="position-relative overflow-hidden rounded" style="height: 440px;">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=800&q=80" alt="Lookbook 1" class="w-100 h-100 object-fit-cover">
+            <div class="position-absolute bottom-0 start-0 p-4 text-white" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+              <h5 class="font-serif mb-1 text-white">Study 01: Double-Faced Cashmere</h5>
+              <small class="text-white-50">Photographed in Como, Italy</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="position-relative overflow-hidden rounded" style="height: 440px;">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Lookbook 2" class="w-100 h-100 object-fit-cover">
+            <div class="position-absolute bottom-0 start-0 p-4 text-white" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+              <h5 class="font-serif mb-1 text-white">Study 02: Mulberry Silk Fluidity</h5>
+              <small class="text-white-50">Evening Jacquard Nocturne</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="position-relative overflow-hidden rounded" style="height: 440px;">
+            <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=800&q=80" alt="Lookbook 3" class="w-100 h-100 object-fit-cover">
+            <div class="position-absolute bottom-0 start-0 p-4 text-white" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+              <h5 class="font-serif mb-1 text-white">Study 03: Vegetable-Tanned Lambskin</h5>
+              <small class="text-white-50">Tuscan Leather Heritage</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & The 4 Pillars -->
+  <section class="py-5 my-md-4">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Core Philosophy</span>
+        <h2 class="section-title">The Four Pillars of Valenti</h2>
+        <p class="section-description">Our standard for every thread, seam, and garment we release.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="feature-box">
+            <i class="bi bi-feather feature-icon"></i>
+            <h4 class="feature-title">Noble Raw Fibers</h4>
+            <p class="feature-desc">We exclusively commission long-staple Supima cottons, Mongolian cashmere, Normandy flax linen, and Okayama selvedge denim.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="feature-box">
+            <i class="bi bi-scissors feature-icon"></i>
+            <h4 class="feature-title">Architectural Cut</h4>
+            <p class="feature-desc">Every pattern is sculpted three-dimensionally on living forms rather than flat mannequins, ensuring comfort in natural motion.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="feature-box">
+            <i class="bi bi-recycle feature-icon"></i>
+            <h4 class="feature-title">Zero-Waste Ethics</h4>
+            <p class="feature-desc">Textile offcuts are collected and re-spun into our accessory linings. All packaging is biodegradable and plastic-free.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="feature-box">
+            <i class="bi bi-infinity feature-icon"></i>
+            <h4 class="feature-title">Lifelong Durability</h4>
+            <p class="feature-desc">We provide complimentary repair and conditioning consultations for our outerwear and leathergoods for life.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder's Note -->
+  <section class="py-5 bg-white border-top">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8 text-center">
+          <span class="section-subtitle">Creative Director's Note</span>
+          <h3 class="font-serif mb-4 display-6">"True luxury is found in quiet confidence."</h3>
+          <p class="text-secondary lead mb-4" style="line-height: 1.8;">
+            "We believe the garments you wear should not shout for attention. Instead, they should command respect through the weight of their cloth, the balance of their proportion, and the care woven into their seams."
+          </p>
+          <div class="font-serif fs-4 fw-bold text-dark">Matteo Valenti</div>
+          <span class="text-muted small text-uppercase" style="letter-spacing: 0.15em;">Founder &amp; Creative Director</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section text-center">
+    <div class="container">
+      <span class="section-subtitle">Join The Atelier Circle</span>
+      <h2 class="section-title mb-3">Privileged Access & Private Previews</h2>
+      <form class="newsletter-form">
+        <input type="email" class="form-control newsletter-input" placeholder="Enter your email address..." required>
+        <button type="submit" class="btn-atelier-dark text-nowrap">Subscribe <i class="bi bi-arrow-right"></i></button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="atelier-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-12 col-lg-4">
+          <div class="brand-logo text-white mb-3">
+            <span>VALENTI</span>
+            <span class="brand-logo-sub text-white-50">Atelier</span>
+          </div>
+          <p class="text-white-50 small pe-lg-4">
+            Founded on the pillars of timeless elegance, ethical sustainability, and bespoke tailoring. Engineered for modern tastemakers across the globe.
+          </p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Collections</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=jackets">Outerwear</a></li>
+            <li><a href="shop.html?category=shirts">Tailored Shirts</a></li>
+            <li><a href="shop.html?category=t-shirts">Premium Tees</a></li>
+            <li><a href="shop.html?category=trousers">Trousers</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Concierge</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">Atelier Story</a></li>
+            <li><a href="contact.html">Flagship Boutiques</a></li>
+            <li><a href="contact.html">Client Care</a></li>
+            <li><a href="contact.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5 class="footer-heading">Newsletter</h5>
+          <p class="text-white-50 small">Subscribe for runway preview access and private releases.</p>
+          <form class="newsletter-form mt-3">
+            <input type="email" class="form-control newsletter-input" placeholder="Your email..." required>
+            <button type="submit" class="btn-atelier-dark text-nowrap">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="mb-2 mb-md-0 text-white-50 small">&copy; 2026 VALENTI ATELIER Inc. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Offcanvas Shopping Cart Drawer -->
+  <div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title font-serif" id="offcanvasCartLabel">
+        <i class="bi bi-bag me-2"></i> Your Shopping Bag (<span class="cart-badge-count">0</span>)
+      </h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body p-4">
+      <div id="offcanvasCartEmpty" class="text-center py-5" style="display: none;">
+        <i class="bi bi-bag-x fs-1 text-muted d-block mb-3"></i>
+        <h5 class="font-serif">Your bag is currently empty</h5>
+      </div>
+      <div id="offcanvasCartItems"></div>
+    </div>
+    <div class="p-4 border-top bg-white" id="offcanvasCartFooter">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="text-muted small">Estimated Subtotal</span>
+        <span class="fs-5 fw-bold text-dark" id="offcanvasCartSubtotal">$0.00</span>
+      </div>
+      <div class="d-grid gap-2">
+        <a href="checkout.html" class="btn-atelier-dark text-center">Proceed to Checkout <i class="bi bi-lock-fill ms-1"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content search-modal-content border-0">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="small text-uppercase fw-bold text-gold" style="letter-spacing: 0.15em;">Search Atelier</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <input type="text" id="liveSearchInput" class="search-input-lg" placeholder="Search collections...">
+        <div id="liveSearchResults" class="search-results-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Account Modal -->
+  <div class="modal fade" id="accountModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 440px;">
+      <div class="modal-content rounded-1 p-4 border-0">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="font-serif mb-0">Client Sign In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form onsubmit="event.preventDefault(); showToast('Signed in successfully', 'success'); bootstrap.Modal.getInstance(document.getElementById('accountModal')).hide();">
+          <div class="mb-3">
+            <label class="form-label small text-uppercase fw-semibold">Email</label>
+            <input type="email" class="form-control" required placeholder="client@atelier.com">
+          </div>
+          <div class="mb-3">
+            <label class="form-label small text-uppercase fw-semibold">Password</label>
+            <input type="password" class="form-control" required placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+          </div>
+          <button type="submit" class="btn-atelier-dark w-100">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

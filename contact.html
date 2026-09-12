@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Flagship Boutiques | VALENTI ATELIER</title>
+  <meta name="description" content="Connect with the Valenti Atelier private concierge. Flagship boutique addresses in Milan, Paris, New York, and Tokyo.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Luxury Design System -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar text-center">
+    <div class="container">
+      Complimentary Express Shipping on Orders Over $150 &nbsp;|&nbsp;
+      Use code <a href="shop.html">VALENTI10</a> for 10% Off
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar navbar-expand-lg sticky-top atelier-navbar">
+    <div class="container">
+      <button class="navbar-toggler border-0 p-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas">
+        <i class="bi bi-list fs-2 text-dark"></i>
+      </button>
+
+      <a class="brand-logo" href="index.html">
+        <span>VALENTI</span>
+        <span class="brand-logo-sub">Atelier</span>
+      </a>
+
+      <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html?gender=men">Men</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html?gender=women">Women</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html?filter=new">New Arrivals</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="d-flex align-items-center gap-1">
+        <button class="nav-icon-btn" data-bs-toggle="modal" data-bs-target="#searchModal" title="Search catalog">
+          <i class="bi bi-search"></i>
+        </button>
+        <button class="nav-icon-btn d-none d-sm-inline-flex" data-bs-toggle="modal" data-bs-target="#accountModal" title="Account login">
+          <i class="bi bi-person"></i>
+        </button>
+        <a href="shop.html?filter=wishlist" class="nav-icon-btn" title="Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="badge-counter wishlist-badge-count" style="display: none;">0</span>
+        </a>
+        <button class="nav-icon-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" title="Shopping Bag">
+          <i class="bi bi-bag"></i>
+          <span class="badge-counter cart-badge-count" style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas" style="width: 320px;">
+    <div class="offcanvas-header border-bottom">
+      <div class="brand-logo">
+        <span>VALENTI</span>
+        <span class="brand-logo-sub">Atelier</span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body p-4">
+      <ul class="list-unstyled mb-4">
+        <li class="py-2 border-bottom"><a href="index.html" class="fw-semibold text-dark text-uppercase small">Home</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html" class="fw-semibold text-dark text-uppercase small">All Collections</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html?gender=men" class="fw-semibold text-dark text-uppercase small">Men's Atelier</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html?gender=women" class="fw-semibold text-dark text-uppercase small">Women's Atelier</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html?filter=new" class="fw-semibold text-dark text-uppercase small">New Arrivals</a></li>
+        <li class="py-2 border-bottom"><a href="about.html" class="fw-semibold text-dark text-uppercase small">Brand Story & Craft</a></li>
+        <li class="py-2 border-bottom"><a href="contact.html" class="fw-semibold text-dark text-uppercase small">Boutiques & Contact</a></li>
+        <li class="py-2"><a href="cart.html" class="fw-semibold text-dark text-uppercase small">View Shopping Bag</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="py-5 bg-white border-bottom text-center">
+    <div class="container py-md-3">
+      <span class="section-subtitle">Private Concierge</span>
+      <h1 class="display-5 font-serif mb-2">Connect With The Atelier</h1>
+      <p class="text-secondary small mb-0 mx-auto" style="max-width: 540px;">
+        Whether scheduling a private fitting in our Milan salon or requesting bespoke sizing consultation, our concierge advisors are at your service.
+      </p>
+    </div>
+  </header>
+
+  <!-- Contact Form & Boutique Details Section -->
+  <main class="container py-5">
+    <div class="row g-5">
+
+      <!-- Left Column: Interactive Contact Form -->
+      <div class="col-12 col-lg-7">
+        <div class="bg-white border rounded p-4 p-md-5">
+          <h3 class="font-serif mb-2">Send a Client Inquiry</h3>
+          <p class="text-muted small mb-4">Our dedicated client advisors reply to all inquiries within 12 business hours.</p>
+
+          <form id="contactInquiryForm" novalidate>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label class="form-label small text-uppercase fw-semibold">Your Full Name</label>
+                <input type="text" class="form-control" required placeholder="Elena Rostova">
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+
+              <div class="col-sm-6">
+                <label class="form-label small text-uppercase fw-semibold">Email Address</label>
+                <input type="email" class="form-control" required placeholder="client@atelier.com">
+                <div class="invalid-feedback">A valid email is required.</div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label small text-uppercase fw-semibold">Subject / Area of Assistance</label>
+                <select class="form-select" required>
+                  <option value="" selected>Select inquiry topic...</option>
+                  <option value="private-fitting">Private Boutique Appointment & Fitting</option>
+                  <option value="order-status">Order Status & White-Glove Delivery</option>
+                  <option value="bespoke-sizing">Bespoke Sizing & Garment Recommendation</option>
+                  <option value="press">Press, Editorial & Media Inquiries</option>
+                  <option value="other">Other Inquiries</option>
+                </select>
+                <div class="invalid-feedback">Please select a subject.</div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label small text-uppercase fw-semibold">Message</label>
+                <textarea class="form-control" rows="5" required placeholder="Please share your inquiry details, preferred boutique date, or order reference..."></textarea>
+                <div class="invalid-feedback">Please include your message.</div>
+              </div>
+
+              <div class="col-12 mt-4">
+                <button type="submit" class="btn-atelier-dark w-100 py-3">
+                  Transmit Inquiry <i class="bi bi-arrow-right ms-2"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right Column: Flagship Boutique Directory -->
+      <div class="col-12 col-lg-5">
+        <h4 class="font-serif mb-4">Global Salons &amp; Boutiques</h4>
+
+        <!-- Boutique 1: Milan -->
+        <div class="bg-white border rounded p-4 mb-3">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h5 class="font-serif mb-1">Milan Flagship &amp; Tailoring Atelier</h5>
+              <p class="text-secondary small mb-2">Via Monte Napoleone 8, 20121 Milano, Italy</p>
+              <div class="small text-muted">
+                <i class="bi bi-telephone me-1"></i> +39 02 8941 2000<br>
+                <i class="bi bi-clock me-1"></i> Mon - Sat: 10:00 - 19:30 CET
+              </div>
+            </div>
+            <span class="badge bg-dark text-uppercase" style="font-size: 10px;">Atelier HQ</span>
+          </div>
+        </div>
+
+        <!-- Boutique 2: Paris -->
+        <div class="bg-white border rounded p-4 mb-3">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h5 class="font-serif mb-1">Paris Saint-Honoré Salon</h5>
+              <p class="text-secondary small mb-2">24 Rue du Faubourg Saint-Honoré, 75008 Paris, France</p>
+              <div class="small text-muted">
+                <i class="bi bi-telephone me-1"></i> +33 1 42 68 00 12<br>
+                <i class="bi bi-clock me-1"></i> Mon - Sat: 10:30 - 19:00 CET
+              </div>
+            </div>
+            <span class="badge bg-light text-dark border text-uppercase" style="font-size: 10px;">Salon</span>
+          </div>
+        </div>
+
+        <!-- Boutique 3: New York -->
+        <div class="bg-white border rounded p-4 mb-3">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h5 class="font-serif mb-1">New York Madison Avenue</h5>
+              <p class="text-secondary small mb-2">740 Madison Avenue, New York, NY 10065, USA</p>
+              <div class="small text-muted">
+                <i class="bi bi-telephone me-1"></i> +1 (212) 555-0198<br>
+                <i class="bi bi-clock me-1"></i> Mon - Sat: 10:00 - 19:00 EST
+              </div>
+            </div>
+            <span class="badge bg-light text-dark border text-uppercase" style="font-size: 10px;">Boutique</span>
+          </div>
+        </div>
+
+        <!-- Boutique 4: Tokyo -->
+        <div class="bg-white border rounded p-4">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h5 class="font-serif mb-1">Tokyo Ginza Concept Space</h5>
+              <p class="text-secondary small mb-2">6-10-1 Ginza, Chuo-ku, Tokyo 104-0061, Japan</p>
+              <div class="small text-muted">
+                <i class="bi bi-telephone me-1"></i> +81 3 5555 4321<br>
+                <i class="bi bi-clock me-1"></i> Mon - Sun: 11:00 - 20:00 JST
+              </div>
+            </div>
+            <span class="badge bg-light text-dark border text-uppercase" style="font-size: 10px;">Concept</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Interactive Map Placeholder -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Boutique Locations</span>
+        <h2 class="section-title">Visit Our Milan Flagship</h2>
+        <p class="section-description">Via Monte Napoleone 8, 20121 Milano &bull; Private appointments available upon request.</p>
+      </div>
+
+      <!-- Styled Map Embed Container -->
+      <div class="border rounded overflow-hidden shadow-sm" style="height: 380px; position: relative; background-color: #f0ede6;">
+        <iframe
+          src="https://maps.google.com/maps?q=Via%20Monte%20Napoleone%208,%20Milano&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0; filter: grayscale(90%) contrast(1.1);"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion Section -->
+  <section class="py-5">
+    <div class="container" style="max-width: 800px;">
+      <div class="section-header">
+        <span class="section-subtitle">Frequently Asked Questions</span>
+        <h2 class="section-title">Client Care Dossier</h2>
+      </div>
+
+      <div class="accordion accordion-flush" id="faqAccordion">
+        <!-- Q1 -->
+        <div class="accordion-item bg-white border mb-3 rounded">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed font-serif fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              How does complimentary global delivery work?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary small">
+              All orders over $150 automatically qualify for carbon-neutral express courier shipping via DHL Worldwide Express. Orders are packed inside our bespoke gift boxes and dispatched within 24 hours of authorization.
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="accordion-item bg-white border mb-3 rounded">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed font-serif fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              What is your returns and exchange policy?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary small">
+              We offer complimentary 30-day returns and exchanges on unworn garments with original atelier tags intact. Our concierge can arrange courier pickup directly from your residence or office.
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="accordion-item bg-white border mb-3 rounded">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed font-serif fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              Where are your garments manufactured?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary small">
+              Our tailoring and cashmere outerwear are crafted in Tuscany and Biella, Italy. Our selvedge denim is woven on vintage shuttle looms in Kojima, Japan, and our organic jersey foundations are finished in Porto, Portugal.
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="accordion-item bg-white border mb-3 rounded">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed font-serif fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+              Can I schedule a private appointment in boutique?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary small">
+              Yes, our salons in Milan, Paris, New York, and Tokyo welcome private appointments. You will be paired with a dedicated master stylist and offered refreshments in our private VIP viewing rooms.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="atelier-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-12 col-lg-4">
+          <div class="brand-logo text-white mb-3">
+            <span>VALENTI</span>
+            <span class="brand-logo-sub text-white-50">Atelier</span>
+          </div>
+          <p class="text-white-50 small pe-lg-4">
+            Founded on the pillars of timeless elegance, ethical sustainability, and bespoke tailoring. Engineered for modern tastemakers across the globe.
+          </p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Collections</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=jackets">Outerwear</a></li>
+            <li><a href="shop.html?category=shirts">Tailored Shirts</a></li>
+            <li><a href="shop.html?category=t-shirts">Premium Tees</a></li>
+            <li><a href="shop.html?category=trousers">Trousers</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Concierge</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">Atelier Story</a></li>
+            <li><a href="contact.html">Flagship Boutiques</a></li>
+            <li><a href="contact.html">Client Care</a></li>
+            <li><a href="contact.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5 class="footer-heading">Newsletter</h5>
+          <p class="text-white-50 small">Subscribe for runway preview access and private releases.</p>
+          <form class="newsletter-form mt-3">
+            <input type="email" class="form-control newsletter-input" placeholder="Your email..." required>
+            <button type="submit" class="btn-atelier-dark text-nowrap">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="mb-2 mb-md-0 text-white-50 small">&copy; 2026 VALENTI ATELIER Inc. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Offcanvas Shopping Cart Drawer -->
+  <div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title font-serif" id="offcanvasCartLabel">
+        <i class="bi bi-bag me-2"></i> Your Shopping Bag (<span class="cart-badge-count">0</span>)
+      </h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body p-4">
+      <div id="offcanvasCartEmpty" class="text-center py-5" style="display: none;">
+        <i class="bi bi-bag-x fs-1 text-muted d-block mb-3"></i>
+        <h5 class="font-serif">Your bag is currently empty</h5>
+      </div>
+      <div id="offcanvasCartItems"></div>
+    </div>
+    <div class="p-4 border-top bg-white" id="offcanvasCartFooter">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="text-muted small">Estimated Subtotal</span>
+        <span class="fs-5 fw-bold text-dark" id="offcanvasCartSubtotal">$0.00</span>
+      </div>
+      <div class="d-grid gap-2">
+        <a href="checkout.html" class="btn-atelier-dark text-center">Proceed to Checkout <i class="bi bi-lock-fill ms-1"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content search-modal-content border-0">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="small text-uppercase fw-bold text-gold" style="letter-spacing: 0.15em;">Search Atelier</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <input type="text" id="liveSearchInput" class="search-input-lg" placeholder="Search collections...">
+        <div id="liveSearchResults" class="search-results-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Account Modal -->
+  <div class="modal fade" id="accountModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 440px;">
+      <div class="modal-content rounded-1 p-4 border-0">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="font-serif mb-0">Client Sign In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form onsubmit="event.preventDefault(); showToast('Signed in successfully', 'success'); bootstrap.Modal.getInstance(document.getElementById('accountModal')).hide();">
+          <div class="mb-3">
+            <label class="form-label small text-uppercase fw-semibold">Email</label>
+            <input type="email" class="form-control" required placeholder="client@atelier.com">
+          </div>
+          <div class="mb-3">
+            <label class="form-label small text-uppercase fw-semibold">Password</label>
+            <input type="password" class="form-control" required placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+          </div>
+          <button type="submit" class="btn-atelier-dark w-100">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Contact Form Submission Handler -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('contactInquiryForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (!contactForm.checkValidity()) {
+            e.stopPropagation();
+            contactForm.classList.add('was-validated');
+            return;
+          }
+
+          showToast('Thank you. Your inquiry has been dispatched to our Milan concierge advisor.', 'success');
+          contactForm.reset();
+          contactForm.classList.remove('was-validated');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

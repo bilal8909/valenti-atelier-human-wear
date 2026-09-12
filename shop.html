@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Collections | VALENTI ATELIER</title>
+  <meta name="description" content="Explore VALENTI ATELIER luxury ready-to-wear collections: Italian outerwear, tailored shirts, cashmere knitwear, Japanese selvedge denim, and handmade footwear.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Luxury Design System -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar text-center">
+    <div class="container">
+      Complimentary Express Shipping on Orders Over $150 &nbsp;|&nbsp;
+      Use code <a href="#">VALENTI10</a> for 10% Off
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar navbar-expand-lg sticky-top atelier-navbar">
+    <div class="container">
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler border-0 p-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas">
+        <i class="bi bi-list fs-2 text-dark"></i>
+      </button>
+
+      <!-- Brand Logo -->
+      <a class="brand-logo" href="index.html">
+        <span>VALENTI</span>
+        <span class="brand-logo-sub">Atelier</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html?gender=men">Men</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html?gender=women">Women</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html?filter=new">New Arrivals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Action Icons -->
+      <div class="d-flex align-items-center gap-1">
+        <button class="nav-icon-btn" data-bs-toggle="modal" data-bs-target="#searchModal" title="Search catalog">
+          <i class="bi bi-search"></i>
+        </button>
+
+        <button class="nav-icon-btn d-none d-sm-inline-flex" data-bs-toggle="modal" data-bs-target="#accountModal" title="Account login">
+          <i class="bi bi-person"></i>
+        </button>
+
+        <a href="shop.html?filter=wishlist" class="nav-icon-btn" title="Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="badge-counter wishlist-badge-count" style="display: none;">0</span>
+        </a>
+
+        <button class="nav-icon-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" title="Shopping Bag">
+          <i class="bi bi-bag"></i>
+          <span class="badge-counter cart-badge-count" style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas" style="width: 320px;">
+    <div class="offcanvas-header border-bottom">
+      <div class="brand-logo">
+        <span>VALENTI</span>
+        <span class="brand-logo-sub">Atelier</span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-4">
+      <ul class="list-unstyled mb-4">
+        <li class="py-2 border-bottom"><a href="index.html" class="fw-semibold text-dark text-uppercase small">Home</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html" class="fw-semibold text-dark text-uppercase small">All Collections</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html?gender=men" class="fw-semibold text-dark text-uppercase small">Men's Atelier</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html?gender=women" class="fw-semibold text-dark text-uppercase small">Women's Atelier</a></li>
+        <li class="py-2 border-bottom"><a href="shop.html?filter=new" class="fw-semibold text-dark text-uppercase small">New Arrivals</a></li>
+        <li class="py-2 border-bottom"><a href="about.html" class="fw-semibold text-dark text-uppercase small">Brand Story & Craft</a></li>
+        <li class="py-2 border-bottom"><a href="contact.html" class="fw-semibold text-dark text-uppercase small">Boutiques & Contact</a></li>
+        <li class="py-2"><a href="cart.html" class="fw-semibold text-dark text-uppercase small">View Shopping Bag</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Shop Header & Breadcrumbs -->
+  <header class="py-4 bg-white border-bottom">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-2 small">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Collections</li>
+        </ol>
+      </nav>
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+        <div>
+          <h1 class="font-serif display-6 mb-1" id="shopPageTitle">All Collections</h1>
+          <p class="text-muted small mb-0">Impeccably tailored luxury garments crafted for the discerning wardrobe.</p>
+        </div>
+        <div class="d-flex align-items-center gap-3 mt-3 mt-md-0">
+          <span class="text-muted small" id="productsCount">16 pieces found</span>
+          <!-- Mobile Filter Drawer Trigger -->
+          <button class="btn btn-atelier-outline d-lg-none py-2 px-3" data-bs-toggle="offcanvas" data-bs-target="#filterDrawer">
+            <i class="bi bi-funnel me-1"></i> Filter
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Shop Catalog Container -->
+  <div class="container py-5">
+    <div class="row g-4">
+
+      <!-- Desktop Filter Sidebar -->
+      <aside class="col-lg-3 d-none d-lg-block">
+        <!-- Category Filter -->
+        <div class="filter-card">
+          <h5 class="filter-title">
+            <span>Categories</span>
+          </h5>
+          <div id="categoryFiltersContainer">
+            <!-- Populated dynamically by shop.js -->
+          </div>
+        </div>
+
+        <!-- Price Range Filter -->
+        <div class="filter-card">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="filter-title mb-0">Price Range</h5>
+            <span class="badge bg-dark" id="priceRangeDisplay">$1000</span>
+          </div>
+          <input type="range" class="form-range" id="priceRangeSlider" min="50" max="1000" step="25" value="1000">
+          <div class="d-flex justify-content-between text-muted small mt-1">
+            <span>$50</span>
+            <span>$1000</span>
+          </div>
+        </div>
+
+        <!-- Size Filter -->
+        <div class="filter-card">
+          <h5 class="filter-title">Sizes</h5>
+          <div class="d-flex flex-wrap gap-2">
+            <button type="button" class="filter-chip size-filter-chip" data-size="S">S</button>
+            <button type="button" class="filter-chip size-filter-chip" data-size="M">M</button>
+            <button type="button" class="filter-chip size-filter-chip" data-size="L">L</button>
+            <button type="button" class="filter-chip size-filter-chip" data-size="XL">XL</button>
+          </div>
+        </div>
+
+        <!-- In Stock & Reset -->
+        <div class="filter-card">
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="inStockCheck">
+            <label class="form-check-label small" for="inStockCheck">
+              In-Stock Pieces Only
+            </label>
+          </div>
+          <button type="button" id="resetFiltersBtn" class="btn btn-outline-secondary btn-sm w-100 text-uppercase" style="font-size: 11px; letter-spacing: 0.1em;">
+            Reset All Filters
+          </button>
+        </div>
+      </aside>
+
+      <!-- Products Listing Column -->
+      <main class="col-12 col-lg-9">
+        <!-- Catalog Controls Toolbar -->
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-4 pb-3 border-bottom">
+          <div class="d-flex align-items-center gap-2 mb-3 mb-sm-0">
+            <span class="small text-muted text-uppercase fw-semibold" style="letter-spacing: 0.08em;">Sort By:</span>
+            <select class="form-select form-select-sm" id="shopSortSelect" style="width: 200px;">
+              <option value="featured">Featured / Best Sellers</option>
+              <option value="newest">New Arrivals</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Customer Rating</option>
+            </select>
+          </div>
+
+          <!-- Grid Switcher -->
+          <div class="d-none d-sm-flex align-items-center gap-1">
+            <span class="small text-muted me-2">Grid:</span>
+            <button type="button" class="btn btn-sm btn-outline-dark active" id="viewGrid3" title="3 Columns View">
+              <i class="bi bi-grid-3x3"></i>
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-dark" id="viewGrid4" title="4 Columns View">
+              <i class="bi bi-grid"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Product Cards Grid -->
+        <div class="row g-4" id="shopProductsGrid">
+          <!-- Rendered dynamically by shop.js -->
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <!-- Mobile Filter Offcanvas Drawer -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="filterDrawer" aria-labelledby="filterDrawerLabel" style="width: 320px;">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title font-serif" id="filterDrawerLabel">Filter Collections</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-4">
+      <div class="mb-4">
+        <h6 class="fw-bold small text-uppercase mb-2">Category</h6>
+        <div class="d-flex flex-column gap-2">
+          <button class="btn btn-sm btn-outline-dark text-start filter-category-item active" data-category="all" data-bs-dismiss="offcanvas">All Pieces</button>
+          <button class="btn btn-sm btn-outline-dark text-start filter-category-item" data-category="jackets" data-bs-dismiss="offcanvas">Jackets & Coats</button>
+          <button class="btn btn-sm btn-outline-dark text-start filter-category-item" data-category="shirts" data-bs-dismiss="offcanvas">Tailored Shirts</button>
+          <button class="btn btn-sm btn-outline-dark text-start filter-category-item" data-category="t-shirts" data-bs-dismiss="offcanvas">T-Shirts</button>
+          <button class="btn btn-sm btn-outline-dark text-start filter-category-item" data-category="hoodies" data-bs-dismiss="offcanvas">Hoodies</button>
+          <button class="btn btn-sm btn-outline-dark text-start filter-category-item" data-category="jeans" data-bs-dismiss="offcanvas">Jeans</button>
+          <button class="btn btn-sm btn-outline-dark text-start filter-category-item" data-category="trousers" data-bs-dismiss="offcanvas">Trousers</button>
+          <button class="btn btn-sm btn-outline-dark text-start filter-category-item" data-category="shoes" data-bs-dismiss="offcanvas">Shoes & Boots</button>
+          <button class="btn btn-sm btn-outline-dark text-start filter-category-item" data-category="accessories" data-bs-dismiss="offcanvas">Accessories</button>
+        </div>
+      </div>
+      <div class="d-grid pt-3 border-top">
+        <button class="btn btn-atelier-dark" data-bs-dismiss="offcanvas">Apply Filters</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offcanvas Shopping Cart Drawer -->
+  <div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title font-serif" id="offcanvasCartLabel">
+        <i class="bi bi-bag me-2"></i> Your Shopping Bag (<span class="cart-badge-count">0</span>)
+      </h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-4">
+      <div class="free-shipping-progress">
+        <div class="small" id="freeShippingText">
+          Add <strong>$150.00</strong> more to unlock <strong>Complimentary Express Shipping</strong>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="freeShippingFill" style="width: 0%;"></div>
+        </div>
+      </div>
+      <div id="offcanvasCartEmpty" class="text-center py-5" style="display: none;">
+        <i class="bi bi-bag-x fs-1 text-muted d-block mb-3"></i>
+        <h5 class="font-serif">Your bag is currently empty</h5>
+        <p class="text-muted small">Explore our latest arrivals and timeless wardrobe staples.</p>
+        <a href="shop.html" class="btn-atelier-dark mt-2" data-bs-dismiss="offcanvas">Explore Collection</a>
+      </div>
+      <div id="offcanvasCartItems"></div>
+    </div>
+    <div class="p-4 border-top bg-white" id="offcanvasCartFooter">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="text-muted small">Estimated Subtotal</span>
+        <span class="fs-5 fw-bold text-dark" id="offcanvasCartSubtotal">$0.00</span>
+      </div>
+      <p class="text-muted small mb-3">Taxes and express shipping calculated at checkout.</p>
+      <div class="d-grid gap-2">
+        <a href="checkout.html" class="btn-atelier-dark text-center">
+          Proceed to Checkout <i class="bi bi-lock-fill ms-1"></i>
+        </a>
+        <a href="cart.html" class="btn btn-sm text-dark text-center text-uppercase fw-semibold py-2" style="font-size: 11px; letter-spacing: 0.1em;">
+          View Full Bag & Apply Promo Code
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content rounded-1 border-0">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 pt-0">
+          <div class="row g-4 align-items-center">
+            <div class="col-12 col-md-6">
+              <div class="product-image-wrap rounded">
+                <img id="qvModalImage" src="" alt="Product" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <span class="product-category" id="qvModalCategory">Category</span>
+              <h3 class="font-serif mt-1 mb-2" id="qvModalTitle">Product Title</h3>
+              <div class="d-flex align-items-baseline gap-2 mb-3">
+                <span class="fs-4 fw-bold text-dark" id="qvModalPrice">$0.00</span>
+                <span class="text-muted text-decoration-line-through" id="qvModalOriginalPrice" style="display: none;">$0.00</span>
+              </div>
+              <p class="text-muted small mb-4" id="qvModalDescription">Product description...</p>
+              <div class="mb-3">
+                <label class="form-label small fw-semibold text-uppercase" style="letter-spacing: 0.1em;">Select Size</label>
+                <div class="size-selector" id="qvModalSizes"></div>
+              </div>
+              <div class="d-grid gap-2 mt-4">
+                <button type="button" class="btn-atelier-dark w-100" id="qvModalAddToCart" onclick="handleQuickViewAddToCart()">
+                  Add to Shopping Bag <i class="bi bi-bag ms-2"></i>
+                </button>
+                <a href="#" id="qvModalViewDetails" class="text-center text-dark small fw-semibold py-2 text-uppercase" style="letter-spacing: 0.1em;">
+                  View Full Product Details <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content search-modal-content border-0">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="small text-uppercase fw-bold text-gold" style="letter-spacing: 0.15em;">Search Atelier</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <input type="text" id="liveSearchInput" class="search-input-lg" placeholder="Search jackets, linen shirts, cashmere, denim..." autofocus>
+        <div id="liveSearchResults" class="search-results-list">
+          <p class="text-muted small my-3">Popular Searches: <a href="shop.html?category=jackets" class="text-dark text-decoration-underline me-2">Overcoats</a>, <a href="shop.html?category=shirts" class="text-dark text-decoration-underline me-2">Linen Shirts</a>, <a href="shop.html?category=jeans" class="text-dark text-decoration-underline me-2">Selvedge Denim</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Account Modal -->
+  <div class="modal fade" id="accountModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 440px;">
+      <div class="modal-content rounded-1 p-4 border-0">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="font-serif mb-0">Client Sign In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <p class="text-muted small mb-4">Access your order status, bespoke wishlist, and private member perks.</p>
+        <form onsubmit="event.preventDefault(); showToast('Welcome back to the Atelier, client!', 'success'); bootstrap.Modal.getInstance(document.getElementById('accountModal')).hide();">
+          <div class="mb-3">
+            <label class="form-label small text-uppercase fw-semibold">Email Address</label>
+            <input type="email" class="form-control" required placeholder="client@atelier.com">
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <label class="form-label small text-uppercase fw-semibold">Password</label>
+              <a href="#" class="small text-muted text-decoration-underline">Forgot?</a>
+            </div>
+            <input type="password" class="form-control" required placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+          </div>
+          <div class="d-grid mt-4">
+            <button type="submit" class="btn-atelier-dark">Sign In to Atelier</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="atelier-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-12 col-lg-4">
+          <div class="brand-logo text-white mb-3">
+            <span>VALENTI</span>
+            <span class="brand-logo-sub text-white-50">Atelier</span>
+          </div>
+          <p class="text-white-50 small pe-lg-4">
+            Founded on the pillars of timeless elegance, ethical sustainability, and bespoke tailoring. Engineered for modern tastemakers across the globe.
+          </p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Collections</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=jackets">Outerwear</a></li>
+            <li><a href="shop.html?category=shirts">Tailored Shirts</a></li>
+            <li><a href="shop.html?category=t-shirts">Premium Tees</a></li>
+            <li><a href="shop.html?category=hoodies">Hoodies</a></li>
+            <li><a href="shop.html?category=trousers">Trousers</a></li>
+            <li><a href="shop.html?category=jeans">Selvedge Denim</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="footer-heading">Concierge</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">Atelier Story</a></li>
+            <li><a href="contact.html">Flagship Boutiques</a></li>
+            <li><a href="contact.html">Client Care</a></li>
+            <li><a href="contact.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5 class="footer-heading">Newsletter</h5>
+          <p class="text-white-50 small">Subscribe for runway preview access and private releases.</p>
+          <form class="newsletter-form mt-3">
+            <input type="email" class="form-control newsletter-input" placeholder="Your email..." required>
+            <button type="submit" class="btn-atelier-dark text-nowrap">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="mb-2 mb-md-0 text-white-50 small">&copy; 2026 VALENTI ATELIER Inc. All Rights Reserved.</p>
+        <div class="d-flex gap-3 small">
+          <a href="#" class="text-white-50">Privacy</a>
+          <a href="#" class="text-white-50">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>
